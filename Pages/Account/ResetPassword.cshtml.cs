@@ -8,7 +8,7 @@ using Volo.Abp.Identity;
 using Volo.Abp.MultiTenancy;
 using Volo.Abp.Validation;
 
-namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.Account
+namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.Account
 {
     //TODO: Implement live password complexity check on the razor view!
 

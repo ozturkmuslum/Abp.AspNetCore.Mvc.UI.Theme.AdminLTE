@@ -1,12 +1,12 @@
 ﻿using System.Threading.Tasks;
-using Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Themes.AdminLTE.Components.Menu;
-using Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Themes.AdminLTE.Components.Toolbar.LanguageSwitch;
 using Microsoft.Extensions.DependencyInjection;
+using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Themes.AdminLTE.Components.Menu;
+using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Themes.AdminLTE.Components.Toolbar.LanguageSwitch;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Toolbars;
 using Volo.Abp.Localization;
 using Volo.Abp.Users;
 
-namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Toolbars
+namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Toolbars
 {
     public class AdminLTEThemeMainTopToolbarContributor : IToolbarContributor
     {

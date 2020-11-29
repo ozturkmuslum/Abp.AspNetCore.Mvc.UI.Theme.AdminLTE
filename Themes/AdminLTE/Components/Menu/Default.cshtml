@@ -1,7 +1,7 @@
 ﻿@using Volo.Abp.Users
 @using Volo.Abp.UI.Navigation
-@using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Components
 @using Volo.Abp.Identity
+@using Volo.Abp.Ui.Branding
 @inject ICurrentUser CurrentUser
 @inject IBrandingProvider BrandingProvider
 @inject IdentityUserManager UserManager
@@ -39,7 +39,10 @@
                      with font-awesome or any other icon font library -->
                 @foreach (var menuItem in Model.Items)
                 {
-                    if (menuItem.Url == "/") continue;
+                    if (menuItem.Url == "/")
+                    {
+                        continue;
+                    }
 
                     var elementId = string.IsNullOrEmpty(menuItem.ElementId) ? string.Empty : $"id=\"{menuItem.ElementId}\"";
                     var cssClass = string.IsNullOrEmpty(menuItem.CssClass) ? string.Empty : menuItem.CssClass;

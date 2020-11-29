@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Volo.Abp.AspNetCore.Mvc.UI.Theming;
 
-namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.Account
+namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.Account
 {
     public class LoggedOutModel : AccountPageModel
     {

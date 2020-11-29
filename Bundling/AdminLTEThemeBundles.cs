@@ -1,4 +1,4 @@
-﻿namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Bundling
+﻿namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Bundling
 {
     public static class AdminLTEThemeBundles
     {

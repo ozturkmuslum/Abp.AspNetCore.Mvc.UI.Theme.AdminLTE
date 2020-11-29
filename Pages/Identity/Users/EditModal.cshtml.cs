@@ -1,6 +1,6 @@
 using Volo.Abp.Identity;
 
-namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Identity.Users
+namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.Identity.Users
 {
     public class EditModalModel : Volo.Abp.Identity.Web.Pages.Identity.Users.EditModalModel
     {

@@ -1,7 +1,7 @@
 ﻿using Volo.Abp.AspNetCore.Mvc.UI.Theming;
 using Volo.Abp.DependencyInjection;
 
-namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE
+namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE
 {
     [ThemeName(Name)]
     public class AdminLTETheme : ITheme, ITransientDependency

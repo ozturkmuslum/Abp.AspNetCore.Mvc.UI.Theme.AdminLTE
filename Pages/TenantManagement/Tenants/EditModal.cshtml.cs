@@ -1,6 +1,6 @@
 using Volo.Abp.TenantManagement;
 
-namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.TenantManagement.Tenants
+namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.TenantManagement.Tenants
 {
     public class EditModalModel : Volo.Abp.TenantManagement.Web.Pages.TenantManagement.Tenants.EditModalModel
     {

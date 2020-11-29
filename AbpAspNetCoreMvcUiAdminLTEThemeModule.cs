@@ -1,8 +1,8 @@
-﻿using Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Bundling;
-using Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Localization;
-using Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Toolbars;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.DependencyInjection;
+using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Bundling;
+using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Localization;
+using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Toolbars;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
@@ -13,7 +13,7 @@ using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.VirtualFileSystem;
 
-namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE
+namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcUiThemeSharedModule),
@@ -40,7 +40,7 @@ namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE
 
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.AddEmbedded<AbpAspNetCoreMvcUiAdminLTEThemeModule>("Abp.AspNetCore.Mvc.UI.Theme.AdminLTE");
+                options.FileSets.AddEmbedded<AbpAspNetCoreMvcUiAdminLTEThemeModule>("Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE");
             });
 
             Configure<AbpLocalizationOptions>(options =>

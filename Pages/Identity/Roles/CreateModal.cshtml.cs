@@ -1,6 +1,6 @@
 using Volo.Abp.Identity;
 
-namespace Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Identity.Roles
+namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.Identity.Roles
 {
     public class CreateModalModel : Volo.Abp.Identity.Web.Pages.Identity.Roles.CreateModalModel
     {
