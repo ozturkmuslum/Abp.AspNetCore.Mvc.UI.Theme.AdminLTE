@@ -11,11 +11,9 @@
 @inject IHtmlLocalizer<AbpTenantManagementResource> L
 @inject IAuthorizationService Authorization
 @inject IPageLayout PageLayout
-@{
-    PageLayout.Content.Title = L["Tenants"].Value;
+@{ PageLayout.Content.Title = L["Tenants"].Value;
     PageLayout.Content.BreadCrumb.Add(L["Menu:TenantManagement"].Value);
-    PageLayout.Content.MenuItemName = TenantManagementMenuNames.Tenants;
-}
+    PageLayout.Content.MenuItemName = TenantManagementMenuNames.Tenants; }
 @section scripts {
     <abp-script-bundle name="@typeof(IndexModel).FullName">
         <abp-script src="/Pages/FeatureManagement/feature-management-modal.js" />
@@ -32,12 +30,10 @@
             <abp-column size-md="_6" class="text-right">
                 @if (await Authorization.IsGrantedAsync(FeatureManagementPermissions.ManageHostFeatures))
                 {
-                    <abp-button button-type="Primary" name="ManageHostFeatures" icon="cog" text="@L["ManageHostFeatures"].Value" />
-                }
+                    <abp-button button-type="Primary" name="ManageHostFeatures" icon="cog" text="@L["ManageHostFeatures"].Value" />}
                 @if (await Authorization.IsGrantedAsync(TenantManagementPermissions.Tenants.Create))
                 {
-                    <abp-button button-type="Primary" name="CreateTenant" icon="plus" text="@L["NewTenant"].Value"/>
-                }
+                    <abp-button button-type="Primary" name="CreateTenant" icon="plus" text="@L["NewTenant"].Value" />}
             </abp-column>
         </abp-row>
     </abp-card-header>

@@ -2,7 +2,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Bundling;
 using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Localization;
+using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.Account;
 using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Toolbars;
+using Volo.Abp.Account.Web.ProfileManagement;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
@@ -60,6 +62,8 @@ namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE
                 options.Conventions.AuthorizePage("/index");
             });
 
+            ConfigureProfileManagementPage();
+
             Configure<AbpBundlingOptions>(options =>
             {
                 options
@@ -80,6 +84,31 @@ namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE
                             .AddContributors(typeof(AdminLTEThemeGlobalScriptContributor));
                     });
             });
+        }
+
+        private void ConfigureProfileManagementPage()
+        {
+            Configure<RazorPagesOptions>(options =>
+            {
+                options.Conventions.AuthorizePage("/Account/Manage");
+            });
+
+            Configure<ProfileManagementPageOptions>(options =>
+            {
+                options.Contributors.Add(new AccountProfileManagementPageContributor());
+            });
+
+            Configure<AbpBundlingOptions>(options =>
+            {
+                options.ScriptBundles
+                    .Configure(typeof(ManageModel).FullName,
+                        configuration =>
+                        {
+                            configuration.AddFiles("/Pages/Account/Components/ProfileManagementGroup/Password/Default.js");
+                            configuration.AddFiles("/Pages/Account/Components/ProfileManagementGroup/PersonalInfo/Default.js");
+                        });
+            });
+
         }
     }
 }
