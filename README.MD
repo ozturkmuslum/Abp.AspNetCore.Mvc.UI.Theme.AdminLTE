@@ -4,8 +4,13 @@ ABP framework AdminLTE Theme
 
 ABP framework ile geliştirilen AspNet MVC / Razor projeleri için AdminLTE temasıdır.
 
+````shell
 dotnet versiyonu : 5.0
+````
+
+````shell
 ABP versiyonu : 4.0.0-rc.4 
+````
 
 Öncelikle ABP CLI aracını aşağıdaki komutu kullanarak kuralım.
 
