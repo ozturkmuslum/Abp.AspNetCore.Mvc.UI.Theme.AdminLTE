@@ -4,6 +4,7 @@ using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Bundling;
 using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Localization;
 using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.Account;
 using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Toolbars;
+using Volo.Abp.Account.Web;
 using Volo.Abp.Account.Web.ProfileManagement;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
@@ -13,13 +14,16 @@ using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Toolbars;
 using Volo.Abp.AspNetCore.Mvc.UI.Theming;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
+using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.VirtualFileSystem;
 
 namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcUiThemeSharedModule),
-        typeof(AbpAspNetCoreMvcUiMultiTenancyModule)
+        typeof(AbpAspNetCoreMvcUiMultiTenancyModule),
+        typeof(AbpTenantManagementWebModule),
+        typeof(AbpAccountWebModule)
         )]
     public class AbpAspNetCoreMvcUiAdminLTEThemeModule : AbpModule
     {

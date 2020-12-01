@@ -11,7 +11,7 @@
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <IsPackable>true</IsPackable>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <Version>4.0.0-rc.4-1</Version>
+	  <Version>4.0.0-rc.5-1</Version>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -28,8 +28,6 @@
 	  <None Remove="Pages\TenantManagement\Tenants\ConnectionStringsModal.js" />
 	  <None Remove="Pages\TenantManagement\Tenants\Index.js" />
 	</ItemGroup>
-
-
 	<ItemGroup>
 	  <EmbeddedResource Include="Pages\Account\LoggedOut.js" />
 	  <EmbeddedResource Include="Pages\Identity\Roles\index.js" />
@@ -37,14 +35,13 @@
 	  <EmbeddedResource Include="Pages\TenantManagement\Tenants\ConnectionStringsModal.js" />
 	  <EmbeddedResource Include="Pages\TenantManagement\Tenants\Index.js" />
 	</ItemGroup>
-	
 	<ItemGroup>
-		<PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="4.0.0-rc.4" />
-		<PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="4.0.0-rc.4" />
-		<PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="4.0.0-rc.4" />
-		<PackageReference Include="Volo.Abp.Identity.Web" Version="4.0.0-rc.4" />
-		<PackageReference Include="Volo.Abp.TenantManagement.Web" Version="4.0.0-rc.4" />
-		<PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI" Version="4.0.0-rc.4" />
+		<PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="4.0.0-rc.5" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="4.0.0-rc.5" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="4.0.0-rc.5" />
+		<PackageReference Include="Volo.Abp.Identity.Web" Version="4.0.0-rc.5" />
+		<PackageReference Include="Volo.Abp.TenantManagement.Web" Version="4.0.0-rc.5" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI" Version="4.0.0-rc.5" />
 	</ItemGroup>
 
 	<ItemGroup>

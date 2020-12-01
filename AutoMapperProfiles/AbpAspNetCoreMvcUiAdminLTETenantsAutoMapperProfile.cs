@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.TenantManagement.Tenants;
+using Volo.Abp.TenantManagement;
+using TenantManagement=Volo.Abp.TenantManagement.Web.Pages.TenantManagement;
 
 namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.AutoMapperProfiles
 {
@@ -6,15 +9,16 @@ namespace Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.AutoMapperProfiles
     {
         public AbpAspNetCoreMvcUiAdminLTETenantsAutoMapperProfile()
         {
+
             //List
-            CreateMap<Volo.Abp.TenantManagement.TenantDto, Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.TenantManagement.Tenants.EditModalModel.TenantInfoModel>();
+            CreateMap<TenantDto, TenantManagement.Tenants.EditModalModel.TenantInfoModel>();
 
             //CreateModal
-            CreateMap<Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.TenantManagement.Tenants.CreateModalModel.TenantInfoModel, Volo.Abp.TenantManagement.TenantCreateDto>()
+            CreateMap<TenantManagement.Tenants.CreateModalModel.TenantInfoModel, TenantCreateDto>()
                 .MapExtraProperties();
 
             //EditModal
-            CreateMap<Prometyum.Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.Pages.TenantManagement.Tenants.EditModalModel.TenantInfoModel, Volo.Abp.TenantManagement.TenantUpdateDto>()
+            CreateMap<TenantManagement.Tenants.EditModalModel.TenantInfoModel, TenantUpdateDto>()
                 .MapExtraProperties();
 
 
