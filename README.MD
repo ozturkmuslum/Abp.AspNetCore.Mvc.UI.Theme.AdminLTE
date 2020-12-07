@@ -9,7 +9,7 @@ dotnet versiyonu : 5.0
 ````
 
 ````shell
-ABP versiyonu : 4.0.0-rc.5 
+ABP versiyonu : 4.0.0 
 ````
 
 Öncelikle ABP CLI aracını aşağıdaki komutu kullanarak kuralım.
@@ -137,7 +137,7 @@ Projeyi **Build** edelim.
 
 Aktif versiyon
 
-> ABP v4.0.0-rc.5
+> ABP v4.0.0
 
 `Abp.AspNetCore.Mvc.UI.Theme.AdminLTE.csproj` tema proje dosyasında ABP paketlerinin versiyonlarını güncellemeniz yeterli.
 
